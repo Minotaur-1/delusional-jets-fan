@@ -10,6 +10,17 @@
   <meta name="keywords" content="New York Jets, Jets fans, NFL satire, football memes, sports misery, delusional Jets fan">
   <meta name="author" content="Minotaur-1">
   <meta name="robots" content="index, follow">
+  <div class="team-links">
+  <a href="https://thedelusionaljetsfan.com" title="The Delusional Jets Fan">
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/New_York_Jets_logo.svg" alt="Jets" />
+  </a>
+  <a href="https://thedelusionalcowboysfan.com" title="The Delusional Cowboys Fan">
+    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Cowboys" />
+  </a>
+  <a href="https://thedelusionalsteelersfan.com" title="The Delusional Steelers Fan">
+    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Steelers" />
+  </a>
+</div>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HQW2FW5X5"></script>
 <script>
@@ -21,6 +32,23 @@
 </script>
   <style>
     <style>
+    .team-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.team-links img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background-color: transparent;
+  transition: transform 0.2s;
+}
+.team-links img:hover {
+  transform: scale(1.1);
+}
+
   /* Force all text inside the Cusdis comment box to white */
   .cusdis-widget * {
     color: white !important;
