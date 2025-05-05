@@ -211,51 +211,64 @@
   </a>
 </section>
 
-<!-- CSS Styling -->
+<!-- CSS Styling for Subscribe Box -->
 <style>
   #subscribe {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 40px 0;
+    text-align: center;
   }
   .subscribe-link {
     text-decoration: none;
     color: inherit;
   }
   .subscribe-box {
-    display: inline-block;
-    padding: 30px;
-    border: none; /* No border */
-    border-radius: 12px;
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
-    transition: background-color 0.3s, transform 0.3s;
-    max-width: 600px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
     width: 90%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for lift */
-    cursor: pointer
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .subscribe-box:hover {
+    background-color: #111111;
+  }
+  .subscribe-box h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+  }
+  .subscribe-box p {
+    margin: 0;
+    font-size: 14px;
+  }
+</style>
 
 <!-- Comments Section -->
-  
-  <section id="comments" style="padding: 40px 10%;">
-    <h2 style="font-size: 2em; margin-bottom: 10px; border-bottom: 1px solid white; padding-bottom: 5px;">Comments</h2>
-    <div style="max-width: 800px; margin: 0 auto;">
-      <script src="https://giscus.app/client.js"
-              data-repo="minotaur-1/delusional-jets-comments"
-              data-repo-id="R_kgDOOW3hTQ"
-              data-category-id="DIC_kwDOOW3hTc4Co8IL"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="1"
-              data-input-position="bottom"
-              data-theme="dark"
-              data-lang="en"
-              data-loading="lazy"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </div>
-  </section>
+<section id="comments" style="padding: 40px 10%;">
+  <h2 style="font-size: 2em; margin-bottom: 10px; border-bottom: 1px solid white; padding-bottom: 5px;">Comments</h2>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <script src="https://giscus.app/client.js"
+            data-repo="minotaur-1/delusional-jets-comments"
+            data-repo-id="R_kgDOOW3hTQ"
+            data-category-id="DIC_kwDOOW3hTc4Co8IL"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</section>
 
   <div class="byline">
     Website Unfortunately Created by <strong>Minotaur-1</strong>
