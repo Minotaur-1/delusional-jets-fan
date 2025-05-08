@@ -65,6 +65,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
+      flex-wrap: wrap;
     }
     .team-links img {
       width: 50px;
@@ -79,19 +80,21 @@
     nav {
       text-align: center;
       background-color: #0e3e30;
-      padding: 15px 0;
+      padding: 15px 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      flex-wrap: wrap;
     }
     nav a {
       display: inline-block;
-      margin: 0 12px;
-      padding: 10px 18px;
+      margin: 6px 8px;
+      padding: 10px 14px;
       text-decoration: none;
       color: white;
       border: 1px solid white;
       border-radius: 20px;
       font-weight: bold;
       transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 0.9em;
     }
     nav a:hover {
       background-color: white;
@@ -116,12 +119,61 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
+    .subscribe-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .subscribe-box {
+      padding: 30px;
+      background-color: #000000;
+      color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      max-width: 600px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+    .subscribe-box:hover {
+      background-color: #111111;
+    }
+    .subscribe-box h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    .subscribe-box p {
+      margin: 0;
+      font-size: 16px;
+    }
     .byline {
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9em;
       color: #ccc;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+      .team-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .subscribe-box {
+        padding: 20px;
+        font-size: 14px;
+      }
+      .subscribe-box h2 {
+        font-size: 20px;
+      }
+      .subscribe-box p {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -131,15 +183,9 @@
     <h1>The Delusional Jets Fan</h1>
     <div class="subtitle">Refreshed Weekly. Affiliate Sites Below</div>
     <div class="team-links">
-      <a href="https://thedelusionaljetsfan.com" title="The Delusional Jets Fan">
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/New_York_Jets_logo.svg" alt="Jets" />
-      </a>
-      <a href="https://thedelusionalcowboysfan.com" title="The Delusional Cowboys Fan">
-        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Cowboys" />
-      </a>
-      <a href="https://thedelusionalsteelersfan.com" title="The Delusional Steelers Fan">
-        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Steelers" />
-      </a>
+      <a href="https://thedelusionaljetsfan.com"><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/New_York_Jets_logo.svg" alt="Jets" /></a>
+      <a href="https://thedelusionalcowboysfan.com"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Cowboys" /></a>
+      <a href="https://thedelusionalsteelersfan.com"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Steelers" /></a>
     </div>
   </header>
 
@@ -151,119 +197,75 @@
     <a href="#point-of-no-return">Point of No Return</a>
   </nav>
 
- <section id="tortured">
-  <h2>Tortured</h2>
-  <blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">The only NFL, NBA, or MLB team to not make the playoffs during Pope Francis reign as pope is the New York Jets. I hate them. <a href="https://t.co/p3Ci3JTdvy">https://t.co/p3Ci3JTdvy</a></p>&mdash; Jon “Stugotz” Weiner (@stugotz790) <a href="https://twitter.com/stugotz790/status/1914693040943309171?ref_src=twsrc%5Etfw">April 22, 2025</a>
-  </blockquote>
-</section>
+  <section id="tortured">
+    <h2>Tortured</h2>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">The only NFL, NBA, or MLB team to not make the playoffs during Pope Francis reign as pope is the New York Jets. I hate them. <a href="https://t.co/p3Ci3JTdvy">https://t.co/p3Ci3JTdvy</a></p>&mdash; Jon “Stugotz” Weiner (@stugotz790) <a href="https://twitter.com/stugotz790/status/1914693040943309171?ref_src=twsrc%5Etfw">April 22, 2025</a>
+    </blockquote>
+  </section>
 
-<section id="realistic">
-  <h2>Realistic</h2>
-<blockquote class="twitter-tweet">
-  <p lang="en" dir="ltr">
-    Greg Zuerlein missing kicks but they get worse and worse for the 2024 Jets
-    <a href="https://t.co/CEFCEfL6l0">pic.twitter.com/CEFCEfL6l0</a>
-  </p>
-  &mdash; NYJ MIKE (@NyjMike)
-  <a href="https://twitter.com/NyjMike/status/1890824120633303110?ref_src=twsrc%5Etfw">February 15, 2025</a>
-</blockquote>
-</section>
+  <section id="realistic">
+    <h2>Realistic</h2>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">Greg Zuerlein missing kicks but they get worse and worse for the 2024 Jets <a href="https://t.co/CEFCEfL6l0">pic.twitter.com/CEFCEfL6l0</a></p>&mdash; NYJ MIKE (@NyjMike) <a href="https://twitter.com/NyjMike/status/1890824120633303110?ref_src=twsrc%5Etfw">February 15, 2025</a>
+    </blockquote>
+  </section>
 
-<section id="optimistic">
-  <h2>Optimistic</h2>
-  <blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">Armand Membou recorded the fastest time (4.91 seconds) and top speed (20.28 mph) during the 40-yard dash at this year's NFL Combine, earning the highest NGS athleticism score by any offensive tackle in this year's class (94).<br><br>Membou's 4.91-second forty is the fastest by an… <a href="https://t.co/ZJVxT9NuLe">pic.twitter.com/ZJVxT9NuLe</a></p>&mdash; Next Gen Stats (@NextGenStats) <a href="https://twitter.com/NextGenStats/status/1915571867420893503?ref_src=twsrc%5Etfw">April 25, 2025</a>
-  </blockquote>
-</section>
+  <section id="optimistic">
+    <h2>Optimistic</h2>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">Armand Membou recorded the fastest time (4.91 seconds) and top speed (20.28 mph) during the 40-yard dash at this year's NFL Combine... <a href="https://t.co/ZJVxT9NuLe">pic.twitter.com/ZJVxT9NuLe</a></p>&mdash; Next Gen Stats (@NextGenStats) <a href="https://twitter.com/NextGenStats/status/1915571867420893503?ref_src=twsrc%5Etfw">April 25, 2025</a>
+    </blockquote>
+  </section>
 
-<section id="delusional">
-  <h2>Delusional</h2>
-  <blockquote class="twitter-tweet">
-    <p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Jets?src=hash&amp;ref_src=twsrc%5Etfw">#Jets</a> offensive line<br><br>LT: Olu Fashanu (1st round pick)<br>LG: John Simpson (priority FA signing)<br>C: Joe Tippmann (2nd round pick)<br>RG: Alijah Vera-Tucker (1st round pick)<br>RT: Armand Membou (1st round pick)<br><br>They have the potential to be the top line in the NFL.</p>&mdash; Connor Hughes (@Connor_J_Hughes) <a href="https://twitter.com/Connor_J_Hughes/status/1915569288485998953?ref_src=twsrc%5Etfw">April 25, 2025</a>
-  </blockquote>
-</section>
+  <section id="delusional">
+    <h2>Delusional</h2>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">The #Jets offensive line... They have the potential to be the top line in the NFL.</p>&mdash; Connor Hughes (@Connor_J_Hughes) <a href="https://twitter.com/Connor_J_Hughes/status/1915569288485998953?ref_src=twsrc%5Etfw">April 25, 2025</a>
+    </blockquote>
+  </section>
 
-<section id="point-of-no-return">
-  <h2>Point of No Return</h2>
-  <blockquote class="twitter-tweet">
-  <p lang="en" dir="ltr">
-    Jets fans are dopes... they don't understand what a great coach Adam Gase is.
-    <a href="https://t.co/Lm2kCQTDpc">pic.twitter.com/Lm2kCQTDpc</a>
-  </p>
-  &mdash; Funhouse (@BackAftaThis)
-  <a href="https://twitter.com/BackAftaThis/status/1336149914468954114?ref_src=twsrc%5Etfw">December 8, 2020</a>
-</blockquote>
-</section>
+  <section id="point-of-no-return">
+    <h2>Point of No Return</h2>
+    <blockquote class="twitter-tweet">
+      <p lang="en" dir="ltr">Jets fans are dopes... they don't understand what a great coach Adam Gase is. <a href="https://t.co/Lm2kCQTDpc">pic.twitter.com/Lm2kCQTDpc</a></p>&mdash; Funhouse (@BackAftaThis) <a href="https://twitter.com/BackAftaThis/status/1336149914468954114?ref_src=twsrc%5Etfw">December 8, 2020</a>
+    </blockquote>
+  </section>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!-- Newsletter Subscribe Section -->
-<section id="subscribe" style="padding: 40px 10%;">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScsbZMw4dlfDl6P0fiB45SK143fcd1X_GSoZOLwb-mszoqYMA/viewform" target="_blank" class="subscribe-link">
-    <div class="subscribe-box">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>Get updates from the most delusional Jets fans on the planet.</p>
+  <section id="subscribe" style="padding: 40px 10%;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScsbZMw4dlfDl6P0fiB45SK143fcd1X_GSoZOLwb-mszoqYMA/viewform" target="_blank" class="subscribe-link">
+      <div class="subscribe-box">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get updates from the most delusional Jets fans on the planet.</p>
+      </div>
+    </a>
+  </section>
+
+  <section id="comments" style="padding: 40px 10%;">
+    <h2 style="font-size: 2em; margin-bottom: 10px; border-bottom: 1px solid white; padding-bottom: 5px;">Comments</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <script src="https://giscus.app/client.js"
+              data-repo="minotaur-1/delusional-jets-comments"
+              data-repo-id="R_kgDOOW3hTQ"
+              data-category-id="DIC_kwDOOW3hTc4Co8IL"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="1"
+              data-input-position="bottom"
+              data-theme="dark"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+      </script>
     </div>
-  </a>
-</section>
+  </section>
 
-<style>
-  .subscribe-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  .subscribe-box {
-    padding: 30px;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    max-width: 600px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  .subscribe-box:hover {
-    background-color: #111111;
-  }
-  .subscribe-box h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
-  }
-  .subscribe-box p {
-    margin: 0;
-    font-size: 16px;
-  }
-</style>
-
-<!-- Comments Section -->
-<section id="comments" style="padding: 40px 10%;">
-  <h2 style="font-size: 2em; margin-bottom: 10px; border-bottom: 1px solid white; padding-bottom: 5px;">Comments</h2>
-  <div style="max-width: 800px; margin: 0 auto;">
-    <script src="https://giscus.app/client.js"
-            data-repo="minotaur-1/delusional-jets-comments"
-            data-repo-id="R_kgDOOW3hTQ"
-            data-category-id="DIC_kwDOOW3hTc4Co8IL"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="1"
-            data-input-position="bottom"
-            data-theme="dark"
-            data-lang="en"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
+  <div class="byline">
+    Website Unfortunately Created by <strong>Minotaur-1</strong>
   </div>
-</section>
-
-<div class="byline">
-  Website Unfortunately Created by <strong>Minotaur-1</strong>
-</div>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 </body>
 </html>
